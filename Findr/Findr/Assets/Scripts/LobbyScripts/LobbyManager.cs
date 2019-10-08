@@ -10,17 +10,33 @@ public class LobbyManager : MonoBehaviour
     [SerializeField]
     private int money = 0;
 
+    public GameObject clientTemplate;
     public Button upgradeButton;
     public Text moneyText;
     public Text lobbyLevelText;
     public List<GameObject> spawnPoints;
+
+    
 
 
 
     private void Awake()
     {
         CheckPlayerPrefs();
-        UpdateLobbyText();        
+        UpdateLobbyText();
+        SpawnClients();
+    }
+
+
+    private void SpawnClients()
+    {
+        for(int i = 0; i < spawnPoints.Count; i++)
+        {
+            Instantiate(clientTemplate, spawnPoints[i].transform);
+        }
+
+
+
     }
 
     private void CheckPlayerPrefs()
