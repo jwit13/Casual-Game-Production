@@ -28,15 +28,14 @@ public class LobbyManager : MonoBehaviour
     }
 
 
+
+
     private void SpawnClients()
     {
         for(int i = 0; i < spawnPoints.Count; i++)
         {
             Instantiate(clientTemplate, spawnPoints[i].transform);
         }
-
-
-
     }
 
     private void CheckPlayerPrefs()
