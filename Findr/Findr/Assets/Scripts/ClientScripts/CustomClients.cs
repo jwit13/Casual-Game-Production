@@ -7,8 +7,7 @@ using UnityEngine;
 public class CustomClients : ScriptableObject
 {
     public new string name;
+    public string bio;
     public Sprite artwork;
     public List<Trait> traits = new List<Trait>();
-
-
 }
