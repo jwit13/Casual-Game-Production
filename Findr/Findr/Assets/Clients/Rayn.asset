@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
-  m_Name: Ryan
+  m_Name: Rayn
   m_EditorClassIdentifier: 
-  name: Ryan
+  name: Rayn
   bio: I may be into some weird stuff, so timid sharks swipe left!
   artwork: {fileID: 21300000, guid: 18b4e9c5f77437541ad23a631175e3e4, type: 3}
