@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
+  m_Script: {fileID: 11500000, guid: 87bb81eec61968449bc6e2d262233f6a, type: 3}
   m_Name: Sherry
   m_EditorClassIdentifier: 
   name: Sherry
   bio: "Howdy! My name is Sherry! I speak 2 languages, and I love exploring life!
     If you hang out with me for too long I\u2019ll brainwash you into believing in
-    yourself and knowing you can achieve anything."
+    yourself and knowing you can achieve anything. "
   artwork: {fileID: 21300000, guid: 7ab98e8f544615748b1989a3c44b8a96, type: 3}
