@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Hammerhez
   m_EditorClassIdentifier: 
   name: Hammerhez
+  bio: Why would I want to play Findr?
   artwork: {fileID: 21300000, guid: 9d5bef7580f258f4f96e204f9d561a4a, type: 3}

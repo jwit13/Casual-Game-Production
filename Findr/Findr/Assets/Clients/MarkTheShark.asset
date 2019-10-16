@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
-  m_Name: Alfred
+  m_Name: MarkTheShark
   m_EditorClassIdentifier: 
-  name: Alfred
-  bio: My favorite activity is extending due dates.
-  artwork: {fileID: 21300000, guid: 70498500e0b45db4e8cbe45e5ed53abf, type: 3}
+  name: Mark The Shark
+  bio: What's up! I'm Mark the Shark. FWB, anyone?
+  artwork: {fileID: 21300000, guid: a84496e1db6baac458c935f759886897, type: 3}
