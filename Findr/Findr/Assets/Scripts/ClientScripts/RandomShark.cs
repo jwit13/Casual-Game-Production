@@ -8,8 +8,17 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
 {
     public List<CustomClients> customClients = new List<CustomClients>();
     public List<Clients> normalClients = new List<Clients>();
+
+
     public GameObject profilePanel;
+    public Image profileImage;
+    public Text nameText;
+    public Text bioText;
+    
     private GameObject background;
+  
+
+
 
     bool sharkType;
 
@@ -23,19 +32,39 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
 
         profilePanel.GetComponent<RectTransform>().sizeDelta = background.GetComponent<RectTransform>().sizeDelta;       
         
-
+        //Gets a random client between the trash clients and custom clients
         sharkType = (Random.value > 0.5f);
 
+        //Replace/Add to these later with a while loop that gets another value until there are no sharks that have the same artwork (to account for both Custom and Trash sharks).
         if (sharkType)
         {
-            gameObject.GetComponent<Image>().sprite = customClients[Random.Range(0, customClients.Count)].artwork;
+            //Gets a random custom client
+            CustomClients randomCustClient = customClients[Random.Range(0, customClients.Count)];     
+            
+            gameObject.GetComponent<Image>().sprite = randomCustClient.artwork;
+            profileImage.sprite = gameObject.GetComponent<Image>().sprite;
+            nameText.text = randomCustClient.name;
+            bioText.text = randomCustClient.bio;
+
+
+
         }
         else
         {
+            //Gets a random trash client (WIP)
+            //Replace with trash clients when we get them ready.
+            CustomClients randomClient = customClients[Random.Range(0, customClients.Count)];
+                        
             Debug.Log("I'm supposed to be trash sharks but we don't have any yet so I'll just use custom sharks aswell RIP.");
-            gameObject.GetComponent<Image>().sprite = customClients[Random.Range(0, customClients.Count)].artwork;
 
+            gameObject.GetComponent<Image>().sprite = randomClient.artwork;
+            profileImage.sprite = gameObject.GetComponent<Image>().sprite;
+            nameText.text = randomClient.name;
+            bioText.text = randomClient.bio;
         }
+
+
+
     }
 
     public void OnPointerClick(PointerEventData eventData)

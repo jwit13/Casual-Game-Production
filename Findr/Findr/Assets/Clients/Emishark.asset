@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Emishark
   m_EditorClassIdentifier: 
   name: Emishark
+  bio: Fish are friends, not food.
   artwork: {fileID: 21300000, guid: 8585f0c6b0c1fce4a8df06de25745839, type: 3}
