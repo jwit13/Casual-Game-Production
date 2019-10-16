@@ -93,7 +93,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c8696ab0b7487f4ea9883e84ed5346d, type: 2}
   - {fileID: 11400000, guid: 3fb25bbd88b9e324192846e15b6544eb, type: 2}
   - {fileID: 11400000, guid: 6c99cbbd928a06f4e8c308ccfee9583c, type: 2}
-  normalClients: []
+  normalClients:
+  - {fileID: 11400000, guid: 4b192c1b57e6ab749a2daafbd0ed6565, type: 2}
+  - {fileID: 11400000, guid: af357deaa23b54948b84a8cfd1431e14, type: 2}
+  - {fileID: 11400000, guid: a2cd8277245bb55409dd7357557db271, type: 2}
+  - {fileID: 11400000, guid: 04b9e238121225a45915c53f2570770e, type: 2}
   profilePanel: {fileID: 3258515890328463844}
   profileImage: {fileID: 289229773968136915}
   nameText: {fileID: 1598036799159430117}
