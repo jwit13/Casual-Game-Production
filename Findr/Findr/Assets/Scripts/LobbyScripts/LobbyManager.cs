@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class LobbyManager : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +27,18 @@ public class LobbyManager : MonoBehaviour
         CheckPlayerPrefs();
         UpdateLobbyText();
         SpawnClients();
+        CheckClients();
+        
+    }
+
+
+    private void CheckClients()
+    {
+
+        //Check list for duplications
+        //Might need to make RandomShark CreateShark() public and re-access
+
+
     }
 
 
@@ -36,6 +50,8 @@ public class LobbyManager : MonoBehaviour
         {
             Instantiate(clientTemplate, spawnPoints[i].transform);
         }
+
+
     }
 
     private void CheckPlayerPrefs()
