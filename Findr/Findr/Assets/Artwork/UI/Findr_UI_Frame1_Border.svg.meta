@@ -37,17 +37,17 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: Findr_UI_Frame1_BorderSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.50061095, y: 0.50061095}
       alignment: 0
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 27, y: 31, z: 28, w: 26}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 401
+        height: 401
       spriteID: b11b3fdff224598419baad8b68a2ff18
       internalID: 0
     PhysicsOutlines: []
