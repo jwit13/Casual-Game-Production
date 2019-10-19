@@ -15,3 +15,8 @@ MonoBehaviour:
   name: Alfred
   bio: My favorite activity is extending due dates.
   artwork: {fileID: 21300000, guid: 70498500e0b45db4e8cbe45e5ed53abf, type: 3}
+  likedTraits:
+  - {fileID: 11400000, guid: 54257dc31bde94c49b4fcfcb40e97b20, type: 2}
+  - {fileID: 11400000, guid: a6f7330c642a5f44c9d82d3250677808, type: 2}
+  - {fileID: 11400000, guid: b40368b6ae2e7b945ad95f3506794f78, type: 2}
+  dislikedTraits: []
