@@ -25,7 +25,10 @@ public class LobbyManager : MonoBehaviour
     public List<CustomClients> customClientList = new List<CustomClients>();
     public List<NormalClients> normalClientList = new List<NormalClients>();    
     public List<GameObject> clients = new List<GameObject>();
-    List<CustomClients> randomizedList;
+
+    [HideInInspector]
+    public List<CustomClients> randomizedList;
+    public List<CustomClients> usedList;
 
 
     private void Awake()
@@ -114,13 +117,18 @@ public class LobbyManager : MonoBehaviour
         clientSelection.SetActive(false);
     }
 
-    //gets random clients, (idk if this shit works)
+    //Gets random clients, (idk if this shit works)
     private void GetRandomClients(int capacity)
     {
-        Debug.Log(capacity); //Looks like its getting the correct number here.
+        Debug.Log("Random Client Capacity: " + capacity); //Looks like its getting the correct number here.
 
         //Only get Custom Client for now will fill up with more once we have more sharks.
-        randomizedList.Clear();
+        
+        if (randomizedList != null)
+        {
+            randomizedList.Clear();
+        }
+        
         randomizedList = new List<CustomClients>(capacity);
 
         //Theres definately something wrong here but fuck arrays and lists. But also I'm 100% sure I'm making this harder then I need to be.
@@ -138,21 +146,24 @@ public class LobbyManager : MonoBehaviour
             else
             {
                 //I'm pretty sure this is toxic and might crash u so save before u end up using this.
-                while(randomizedList.Contains(randomClient))
+                int sharkCount = 0;
+                while(randomizedList.Count < capacity && sharkCount < customClientList.Count)
                 {
                     //Idk just some stuff that looks correct but prolly isn't
                     randomizedList.Remove(randomClient);
                     randomClient = customClientList[Random.Range(0, customClientList.Count)];
-                    randomizedList.Add(randomClient);              
-
+                    randomizedList.Add(randomClient);
+                    sharkCount++;
                 }
             }
 
         }
-
-        
-
-
+        usedList = randomizedList;
+        /*foreach (CustomClients c in usedList)
+        {
+            Debug.Log(c.name);
+        }
+        Debug.Log("----------");*/
     }
     
     //Checks the level of the lobby and updates the available selectable clients in the selection window

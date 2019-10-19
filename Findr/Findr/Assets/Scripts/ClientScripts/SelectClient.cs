@@ -11,6 +11,8 @@ public class SelectClient : MonoBehaviour
     
     private void Start()
     {
+        customClient = LobbyManager.Instance.usedList[0];
+        LobbyManager.Instance.usedList.RemoveAt(0);
         gameObject.GetComponent<Image>().sprite = customClient.artwork;
     }
 
