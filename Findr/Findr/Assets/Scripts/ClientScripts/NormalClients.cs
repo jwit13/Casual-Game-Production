@@ -4,8 +4,8 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(fileName = "Random Client", menuName = "Client/Random Client")]
-public class Clients : ScriptableObject
+[CreateAssetMenu(fileName = "Normal Client", menuName = "Client/Normal Client")]
+public class NormalClients : ScriptableObject
 {
     public new string name;
     public string bio;

@@ -2,56 +2,121 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
 public class LobbyManager : MonoBehaviour
 {
+    public static LobbyManager Instance { get; private set; }
+
     [SerializeField]
     private int lobbyLevel = 0;
     [SerializeField]
     private int money = 0;
 
-    public GameObject clientTemplate;
+    
     public Button upgradeButton;
     public Text moneyText;
     public Text lobbyLevelText;
-    public List<GameObject> spawnPoints;
+    public GameObject clientSelection;
 
-    
+    [Header("Client Lists")]
+    public List<CustomClients> customClientList = new List<CustomClients>();
+    public List<NormalClients> normalClientList = new List<NormalClients>();    
+    public List<GameObject> clients = new List<GameObject>();
 
 
 
     private void Awake()
     {
-        CheckPlayerPrefs();
-        UpdateLobbyText();
-        SpawnClients();
-        CheckClients();
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this);
+
+
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            CheckPlayerPrefs();
+            UpdateLobbyText();
+            CheckLevel();
+        }
+        
+        
         
     }
 
+    private void Start()
+    {
+        //CheckClients();
+    }
 
-    private void CheckClients()
+
+    
+    public void OpenClientSelection()
+    {
+        clientSelection.SetActive(true);
+    }
+
+    public void CloseClientSelection()
+    {
+        clientSelection.SetActive(false);
+    }
+
+
+    private void GetRandomClient()
     {
 
-        //Check list for duplications
-        //Might need to make RandomShark CreateShark() public and re-access
+    }
+
+    private void SpawnClients()
+    {
+
 
 
     }
 
-
-
-
-    private void SpawnClients()
+    private void CheckLevel()
     {
-        for(int i = 0; i < spawnPoints.Count; i++)
+        switch (lobbyLevel)
         {
-            Instantiate(clientTemplate, spawnPoints[i].transform);
+            case 0:
+                clients[0].SetActive(true);
+                break;
+
+            case 1:
+                for(int i = 0; i < 2; i++)
+                {
+                    clients[i].SetActive(true);
+                }
+                break;
+
+            case 2:
+                for (int i = 0; i < 5; i++)
+                {
+                    clients[i].SetActive(true);
+                }
+                break;
+
+            case 3:
+                for (int i = 0; i < clients.Count; i++)
+                {
+                    clients[i].SetActive(true);
+                }
+                break;
+
+            default:
+                for (int i = 0; i < 2; i++)
+                {
+                    clients[i].SetActive(true);
+                }
+                break;
         }
-
-
     }
 
     private void CheckPlayerPrefs()

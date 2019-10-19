@@ -17,3 +17,10 @@ MonoBehaviour:
     beards. Did you know that the Berenstain Bears have always been the Berenstain
     Bears? Mandela Effect!
   artwork: {fileID: 21300000, guid: 96f196b1aaefdc04d8068a21237fe60c, type: 3}
+  likedTraits:
+  - {fileID: 11400000, guid: 3de2692aa12bbc0448f6b4d0d4ffea15, type: 2}
+  - {fileID: 11400000, guid: aea3f24b2c5412245874904ca12d291d, type: 2}
+  - {fileID: 11400000, guid: 393096ba98cebaa41b0676ad801bf1ef, type: 2}
+  - {fileID: 11400000, guid: 0725950660d73354db4050d03eb37d94, type: 2}
+  - {fileID: 11400000, guid: b40368b6ae2e7b945ad95f3506794f78, type: 2}
+  dislikedTraits: []

@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class RandomShark : MonoBehaviour,IPointerClickHandler
 {
     public List<CustomClients> customClients = new List<CustomClients>();
-    public List<Clients> normalClients = new List<Clients>();
+    
 
 
     public GameObject profilePanel;
@@ -17,6 +17,7 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
     
     private GameObject background;
     bool sharkType;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +34,9 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
 
         CreateShark();        
         
-
     }
+
+
 
 
 
@@ -51,8 +53,6 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
             nameText.text = randomCustClient.name;
             bioText.text = randomCustClient.bio;
 
-
-
         }
         else
         {
@@ -65,8 +65,10 @@ public class RandomShark : MonoBehaviour,IPointerClickHandler
             gameObject.GetComponent<Image>().sprite = randomClient.artwork;
             profileImage.sprite = gameObject.GetComponent<Image>().sprite;
             nameText.text = randomClient.name;
-            bioText.text = randomClient.bio;
-        }
+            bioText.text = randomClient.bio;        
+
+        }                
+     
     }
 
     public void OnPointerClick(PointerEventData eventData)
