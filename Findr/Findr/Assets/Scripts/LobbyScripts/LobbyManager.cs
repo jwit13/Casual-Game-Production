@@ -47,8 +47,7 @@ public class LobbyManager : MonoBehaviour
             UpdateLobbyText();
             CheckLevel();
         }
-
-        
+                
         
     }
 
@@ -103,35 +102,45 @@ public class LobbyManager : MonoBehaviour
         
     }
 
+    //Opens the Client selection window by clicking on the clipboard
     public void OpenClientSelection()
     {
         clientSelection.SetActive(true);
     }
 
+    //Closes client selection window
     public void CloseClientSelection()
     {
         clientSelection.SetActive(false);
     }
 
+    //gets random clients, (idk if this shit works)
     private void GetRandomClients(int capacity)
     {
-        Debug.Log(capacity);
+        Debug.Log(capacity); //Looks like its getting the correct number here.
+
         //Only get Custom Client for now will fill up with more once we have more sharks.
         randomizedList.Clear();
         randomizedList = new List<CustomClients>(capacity);
 
+        //Theres definately something wrong here but fuck arrays and lists. But also I'm 100% sure I'm making this harder then I need to be.
         for(int i = 0; i < capacity; i++)
         {
+            //Gets a random client from the list and assigns it 
             CustomClients randomClient = customClientList[Random.Range(0, customClientList.Count)];
+            
+            //Checks the randomized list to see if it already contains this (maybe, I mean thats what I think it should be doing, maybe it isn't doing that, fuck me).
             if (!randomizedList.Contains(randomClient))
             {
                 randomizedList.Add(randomClient);
-                break;
+                
             }
             else
             {
+                //I'm pretty sure this is toxic and might crash u so save before u end up using this.
                 while(randomizedList.Contains(randomClient))
                 {
+                    //Idk just some stuff that looks correct but prolly isn't
                     randomizedList.Remove(randomClient);
                     randomClient = customClientList[Random.Range(0, customClientList.Count)];
                     randomizedList.Add(randomClient);              
@@ -146,6 +155,7 @@ public class LobbyManager : MonoBehaviour
 
     }
     
+    //Checks the level of the lobby and updates the available selectable clients in the selection window
     private void CheckLevel()
     {
         switch (lobbyLevel)
@@ -189,6 +199,7 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
+    //Player prefs shit.
     private void CheckPlayerPrefs()
     {
         //Check if the game has been played before and gets previous money and level values.
@@ -211,12 +222,14 @@ public class LobbyManager : MonoBehaviour
         }
     }    
 
+    //Does what it says it does
     private void UpdateLobbyText()
     {
         moneyText.text = "Money: " + money;
         lobbyLevelText.text = "Level " + lobbyLevel;
     }
            
+    //Idk if any of these work but dw about them for now lol.
     private void saveLevel()
     {
         PlayerPrefs.SetInt("Level", lobbyLevel);
