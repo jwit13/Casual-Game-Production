@@ -2735,7 +2735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4391d520cbf39649af77804079f8f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobbyLevel: 0
+  lobbyLevel: 3
   money: 0
   upgradeButton: {fileID: 1149348338}
   moneyText: {fileID: 835602883}
