@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
+  m_Name: Rayn
+  m_EditorClassIdentifier: 
+  name: Rayn
+  bio: I may be into some weird stuff, so timid sharks swipe left!
+  artwork: {fileID: 21300000, guid: 18b4e9c5f77437541ad23a631175e3e4, type: 3}
+  likedTraits:
+  - {fileID: 11400000, guid: 605bb1e7735c00546939bb43a2d70298, type: 2}
+  - {fileID: 11400000, guid: 88139ee53e98b484bb24af0037c42eb6, type: 2}
+  - {fileID: 11400000, guid: abcb7f668d382254fa6f5bfc89baf4d8, type: 2}
+  - {fileID: 11400000, guid: 088af5ff5aca2194592e2b16cff04a7c, type: 2}
+  dislikedTraits:
+  - {fileID: 11400000, guid: 393096ba98cebaa41b0676ad801bf1ef, type: 2}

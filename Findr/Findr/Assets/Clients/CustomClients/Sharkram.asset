@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
+  m_Name: Sharkram
+  m_EditorClassIdentifier: 
+  name: Sharkram
+  bio: Hey, I'm Sharkram. I'm a cancer zodiac, if that matters. I also really like
+    beards. Did you know that the Berenstain Bears have always been the Berenstain
+    Bears? Mandela Effect!
+  artwork: {fileID: 21300000, guid: 96f196b1aaefdc04d8068a21237fe60c, type: 3}
+  likedTraits:
+  - {fileID: 11400000, guid: 3de2692aa12bbc0448f6b4d0d4ffea15, type: 2}
+  - {fileID: 11400000, guid: aea3f24b2c5412245874904ca12d291d, type: 2}
+  - {fileID: 11400000, guid: 393096ba98cebaa41b0676ad801bf1ef, type: 2}
+  - {fileID: 11400000, guid: 0725950660d73354db4050d03eb37d94, type: 2}
+  - {fileID: 11400000, guid: b40368b6ae2e7b945ad95f3506794f78, type: 2}
+  dislikedTraits: []

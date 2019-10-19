@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trait
+[CreateAssetMenu(fileName = "Traits", menuName = "Client/Trait")]
+public class Trait : ScriptableObject
 {
-    public string Name { get; set; }
-    public Color color { get; set; }
-    public string Description { get; set; }
-
+    //Set up traits.
+    public new string name;
+    public Color traitColor = new Color();
+    
 }
