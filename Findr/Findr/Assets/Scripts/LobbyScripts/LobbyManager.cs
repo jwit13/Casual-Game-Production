@@ -48,17 +48,61 @@ public class LobbyManager : MonoBehaviour
             CheckLevel();
         }
 
-        randomizedList.Clear();
+        
         
     }
 
-    private void Start()
-    {
-        //CheckClients();
-    }
 
 
     
+    public void UpgradeLobby()
+    {
+        switch (lobbyLevel)
+        {
+            case 0:
+                if(money >= 0)
+                {
+                    lobbyLevel = 1;
+                    UpdateLobbyText();
+                    CheckLevel();
+                }
+                else
+                {
+                    Debug.Log("Not enough money!");
+                }
+                break;
+            case 1:
+                if (money >= 0)
+                {
+                    lobbyLevel = 2;
+                    UpdateLobbyText();
+                    CheckLevel();
+                }
+                else
+                {
+                    Debug.Log("Not enough money!");
+                }
+                break;
+            case 2:
+                if (money >= 0)
+                {
+                    lobbyLevel = 3;
+                    UpdateLobbyText();
+                    CheckLevel();
+                }
+                else
+                {
+                    Debug.Log("Not enough money!");
+                }
+                break;            
+            default:
+                Debug.Log("Max Level");
+                break;
+        }
+
+        
+    }
+
     public void OpenClientSelection()
     {
         clientSelection.SetActive(true);
@@ -69,9 +113,9 @@ public class LobbyManager : MonoBehaviour
         clientSelection.SetActive(false);
     }
 
-
     private void GetRandomClients(int capacity)
     {
+        Debug.Log(capacity);
         //Only get Custom Client for now will fill up with more once we have more sharks.
         randomizedList.Clear();
         randomizedList = new List<CustomClients>(capacity);
@@ -82,6 +126,7 @@ public class LobbyManager : MonoBehaviour
             if (!randomizedList.Contains(randomClient))
             {
                 randomizedList.Add(randomClient);
+                break;
             }
             else
             {
@@ -100,14 +145,7 @@ public class LobbyManager : MonoBehaviour
 
 
     }
-
-    private void SpawnClients()
-    {
-
-
-
-    }
-
+    
     private void CheckLevel()
     {
         switch (lobbyLevel)
