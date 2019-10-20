@@ -11,13 +11,22 @@ public class FindrManager : MonoBehaviour
 
     public GameObject matcheeCard;
     public GameObject cardSpawn;
-    SpriteRenderer sr;
+    public GameObject startPanel;
+
 
     Vector2 initialPos;
 
     private GameObject spawnedCard;
     private bool destroyCard;
     private bool held;
+
+    private float mainTimer = 60.0f;
+    private float timer;
+    public bool canCount = false;
+    private bool doOnce = false;
+    
+    private float initialScore = 0.0f;
+    private float score;
 
     [SerializeField]
     private int cardCount;
@@ -26,6 +35,9 @@ public class FindrManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = mainTimer;
+        score = initialScore;
+
         //gives instiated object a variable to allow it to be swipable
         spawnedCard = Instantiate(matcheeCard,cardSpawn.transform);
 
@@ -38,9 +50,12 @@ public class FindrManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Timer();
+        UpdateScoreText();
+      
+       
         //Check if LMB is held down
-        if (Input.GetMouseButton(0) && spawnedCard.GetComponent<MatcheeCardScript>().isMouseOver)
+        if (Input.GetMouseButton(0) && spawnedCard.GetComponent<MatcheeCardScript>().isMouseOver && spawnedCard != null)
         {           
             Vector2 pos = Input.mousePosition;
             spawnedCard.transform.position = pos;
@@ -84,6 +99,37 @@ public class FindrManager : MonoBehaviour
         {
             spawnedCard.transform.position = initialPos;
         }
+    }
+
+    public void StartGame()
+    {
+        startPanel.SetActive(false);
+        canCount = true;
+        
+    }
+
+
+    private void Timer()
+    {
+
+        if(timer >= 0.0f && canCount)
+        {
+            timer -= Time.deltaTime;
+            timeText.text = timer.ToString("F");
+        }
+        else if(timer <= 0.0f && !doOnce)
+        {
+            canCount = false;
+            doOnce = true;
+            timeText.text = "0.00";
+            timer = 0.0f;
+        }
+
+    }
+
+    private void UpdateScoreText()
+    {
+        scoreText.text = score.ToString();
     }
 
 
