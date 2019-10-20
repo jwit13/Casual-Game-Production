@@ -69,7 +69,7 @@ public class FindrManager : MonoBehaviour
                 Destroy(spawnedCard);                
                 
             }
-            else if(spawnedCard.transform.position.x >= 350)
+            else if(spawnedCard.transform.position.x >= 300)
             {
                 destroyCard = true;
                 Debug.Log("you swiped right!");
