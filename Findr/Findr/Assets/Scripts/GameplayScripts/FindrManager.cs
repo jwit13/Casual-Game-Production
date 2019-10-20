@@ -28,6 +28,7 @@ public class FindrManager : MonoBehaviour
     {
         //gives instiated object a variable to allow it to be swipable
         spawnedCard = Instantiate(matcheeCard,cardSpawn.transform);
+
         //position to return to if swipe requirements arent met
         initialPos = cardSpawn.transform.position;
         Debug.Log(cardSpawn.transform.childCount);
@@ -39,14 +40,14 @@ public class FindrManager : MonoBehaviour
     {
         
         //Check if LMB is held down
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && spawnedCard.GetComponent<MatcheeCardScript>().isMouseOver)
         {           
             Vector2 pos = Input.mousePosition;
             spawnedCard.transform.position = pos;
             //Debug.Log(pos);
             held = true;
             //Check if you let go of mouse button
-            if(spawnedCard.transform.position.x <= 50)
+            if(spawnedCard.transform.position.x <= 90)
             {
                 destroyCard = true;
                 Debug.Log("You swiped left!");
@@ -60,18 +61,13 @@ public class FindrManager : MonoBehaviour
                 Destroy(spawnedCard);                
                
             }
-
         }
         else
         {
             held = false;
         }
 
-        destroyCard = false;
-     
-
-
-        
+        destroyCard = false;                  
 
     }
 
@@ -89,6 +85,10 @@ public class FindrManager : MonoBehaviour
             spawnedCard.transform.position = initialPos;
         }
     }
+
+
+
+   
 
 
 
