@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class FindrManager : MonoBehaviour
 {
     public Text scoreText;
     public Text timeText;
 
+    public Text finalScoreText;
+    public Text moneyText;
+
     public GameObject matcheeCard;
     public GameObject cardSpawn;
-    public GameObject startPanel;
 
+    public GameObject gamePanel;
+    public GameObject startBtn;
+    public GameObject returnBtn;
+
+    public GameObject finalScoreObject;
+    public GameObject moneyObject;
 
     Vector2 initialPos;
 
@@ -31,10 +40,16 @@ public class FindrManager : MonoBehaviour
     [SerializeField]
     private int cardCount;
 
+    float calculateMoney;
+
 
     // Start is called before the first frame update
     void Start()
     {
+
+        StartGameScene();
+
+
        if(Camera.main.aspect >= .56)
         {
             Debug.Log("9:16");
@@ -79,6 +94,7 @@ public class FindrManager : MonoBehaviour
             if(spawnedCard.transform.position.x <= 90)
             {
                 destroyCard = true;
+                score += 100;
                 Debug.Log("You swiped left!");
                 Destroy(spawnedCard);                
                 
@@ -86,8 +102,10 @@ public class FindrManager : MonoBehaviour
             else if(spawnedCard.transform.position.x >= rightSwipePos)
             {
                 destroyCard = true;
+                score += 100;
                 Debug.Log("you swiped right!");
-                Destroy(spawnedCard);                
+                Destroy(spawnedCard);
+                
                
             }
         }
@@ -113,15 +131,26 @@ public class FindrManager : MonoBehaviour
         {
             spawnedCard.transform.position = initialPos;
         }
+
+        UpdateScoreText();
     }
 
     public void StartGame()
     {
-        startPanel.SetActive(false);
+        startBtn.SetActive(false);
+        gamePanel.SetActive(false);
         canCount = true;
+        
         
     }
 
+    private void StartGameScene()
+    {
+        gamePanel.SetActive(true);
+        moneyObject.SetActive(false);
+        finalScoreObject.SetActive(false);        
+        startBtn.SetActive(true);
+    }
 
     private void Timer()
     {
@@ -137,8 +166,22 @@ public class FindrManager : MonoBehaviour
             doOnce = true;
             timeText.text = "0.00";
             timer = 0.0f;
+            ScoreToMoney();
+            ReturnPanel();
+
         }
 
+    }
+
+    private void ReturnPanel()
+    {
+
+        finalScoreText.text = scoreText.text;
+        moneyText.text = calculateMoney.ToString();
+        gamePanel.SetActive(true);
+        moneyObject.SetActive(true);
+        finalScoreObject.SetActive(true);
+        returnBtn.SetActive(true);
     }
 
     private void UpdateScoreText()
@@ -146,8 +189,15 @@ public class FindrManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    private void ScoreToMoney()
+    {
+        calculateMoney = score / 100;        
+    }
 
-
+    public void ReturnToLobby()
+    {
+        SceneManager.LoadScene(1);
+    }
    
 
 

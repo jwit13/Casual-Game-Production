@@ -12,8 +12,8 @@ public class LobbyManager : MonoBehaviour
 
     [SerializeField]
     private int lobbyLevel = 0;
-    [SerializeField]
-    private int money = 0;
+    
+    public int money = 0;
 
     
     public Button upgradeButton;
