@@ -27,7 +27,7 @@ public class FindrManager : MonoBehaviour
     
     private float initialScore = 0.0f;
     private float score;
-
+    private float rightSwipePos;
     [SerializeField]
     private int cardCount;
 
@@ -35,6 +35,19 @@ public class FindrManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       if(Camera.main.aspect >= .56)
+        {
+            Debug.Log("9:16");
+            rightSwipePos = 350;
+
+
+        }
+        else if (Camera.main.aspect == .5)
+        {
+            Debug.Log("9:18");
+            rightSwipePos = 310;
+        }
+
         timer = mainTimer;
         score = initialScore;
 
@@ -61,6 +74,7 @@ public class FindrManager : MonoBehaviour
             spawnedCard.transform.position = pos;
             //Debug.Log(pos);
             held = true;
+
             //Check if you let go of mouse button
             if(spawnedCard.transform.position.x <= 90)
             {
@@ -69,7 +83,7 @@ public class FindrManager : MonoBehaviour
                 Destroy(spawnedCard);                
                 
             }
-            else if(spawnedCard.transform.position.x >= 300)
+            else if(spawnedCard.transform.position.x >= rightSwipePos)
             {
                 destroyCard = true;
                 Debug.Log("you swiped right!");
