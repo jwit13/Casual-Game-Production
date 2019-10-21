@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PopulateSelected : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class PopulateSelected : MonoBehaviour
     public Text bioText;
     public List<GameObject> likedTraits;
     public List<GameObject> dislikedTraits;
+
+    public ScriptableObject selectedClient;
+
+    public void SelectedMe()
+    {
+        LobbyManager.Instance.selectedClient = selectedClient;
+        SceneManager.LoadScene(2);
+
+    }
 
     // Start is called before the first frame update
     void Start()

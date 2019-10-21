@@ -21,6 +21,8 @@ public class LobbyManager : MonoBehaviour
     public Text lobbyLevelText;
     public GameObject clientSelection;
 
+    public ScriptableObject selectedClient;
+
     [Header("Client Lists")]
     public List<CustomClients> customClientList = new List<CustomClients>();
     public List<NormalClients> normalClientList = new List<NormalClients>();    

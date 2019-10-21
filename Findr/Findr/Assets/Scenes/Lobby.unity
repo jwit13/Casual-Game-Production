@@ -1871,6 +1871,7 @@ MonoBehaviour:
   - {fileID: 161743505}
   - {fileID: 90093478}
   - {fileID: 1956836226}
+  selectedClient: {fileID: 0}
 --- !u!1 &781560788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2807,7 @@ MonoBehaviour:
   moneyText: {fileID: 835602883}
   lobbyLevelText: {fileID: 1067757052}
   clientSelection: {fileID: 1135717397}
+  selectedClient: {fileID: 0}
   customClientList:
   - {fileID: 11400000, guid: 3c8696ab0b7487f4ea9883e84ed5346d, type: 2}
   - {fileID: 11400000, guid: 85258c17df9bf4641ba4641834f81dd7, type: 2}
@@ -4236,7 +4238,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1651729264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752852777}
+        m_MethodName: SelectedMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1651729264
 MonoBehaviour:
   m_ObjectHideFlags: 0

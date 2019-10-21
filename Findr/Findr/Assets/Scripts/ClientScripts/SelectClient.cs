@@ -16,6 +16,7 @@ public class SelectClient : MonoBehaviour
         LobbyManager.Instance.usedList.RemoveAt(0);
         gameObject.GetComponent<Image>().sprite = customClient.artwork;
         populate = selectedSharkPanel.GetComponent<PopulateSelected>();
+        
     }
 
     public void OpenSelectedPanel()
@@ -24,12 +25,14 @@ public class SelectClient : MonoBehaviour
         populate.selectedSharkName.text = customClient.name;
         populate.bioText.text = customClient.bio;
         SetupListedTraits();
+        populate.selectedClient = customClient;
         selectedSharkPanel.SetActive(true);
 
 
 
 
     }
+
 
     private void SetupListedTraits()
     {
