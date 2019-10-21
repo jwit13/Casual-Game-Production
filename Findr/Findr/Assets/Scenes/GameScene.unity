@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &160808434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &225419402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -633,6 +633,15 @@ MonoBehaviour:
   moneyObject: {fileID: 1554619616}
   canCount: 0
   cardCount: 0
+  selectedClientImage: {fileID: 92725417}
+  selectedClientName: {fileID: 751275242}
+  selectedClientTraits:
+  - {fileID: 160808433}
+  - {fileID: 1174463899}
+  - {fileID: 968558403}
+  - {fileID: 1862598048}
+  - {fileID: 1564852770}
+  - {fileID: 225419401}
 --- !u!1 &582754134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &968558404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1211,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174463900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1793,7 +1802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1564852771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2009,7 +2018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1862598049
 RectTransform:
   m_ObjectHideFlags: 0

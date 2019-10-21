@@ -42,6 +42,16 @@ public class FindrManager : MonoBehaviour
 
     float calculateMoney;
 
+    private LobbyManager lobbyManager;
+
+    public Image selectedClientImage;
+    public Text selectedClientName;
+    public List<GameObject> selectedClientTraits;
+
+    private CustomClients customClient;
+    private NormalClients normalClient;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +63,7 @@ public class FindrManager : MonoBehaviour
        if(Camera.main.aspect >= .56)
         {
             Debug.Log("9:16");
-            rightSwipePos = 350;
+            rightSwipePos = 310;
 
 
         }
@@ -150,6 +160,32 @@ public class FindrManager : MonoBehaviour
         moneyObject.SetActive(false);
         finalScoreObject.SetActive(false);        
         startBtn.SetActive(true);
+        lobbyManager = LobbyManager.Instance;
+        Debug.Log(lobbyManager.selectedClient.name);
+
+        //Check type of the selected Client
+        if(lobbyManager.selectedClient is CustomClients)
+        {
+            customClient = (CustomClients)lobbyManager.selectedClient;
+            int clientTraitsNum = customClient.likedTraits.Count;
+            selectedClientName.text = customClient.name;
+            selectedClientImage.sprite = customClient.artwork;
+            for(int i = 0; i < clientTraitsNum; i++)
+            {
+                selectedClientTraits[i].GetComponent<Image>().color = customClient.likedTraits[i].traitColor;
+                selectedClientTraits[i].SetActive(true);
+            }                     
+
+        }
+        else
+        {
+            Debug.Log("I shouldnt be in here");
+        }
+
+        
+
+
+
     }
 
     private void Timer()
