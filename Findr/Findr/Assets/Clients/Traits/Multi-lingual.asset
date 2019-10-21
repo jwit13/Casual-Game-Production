@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Multi-lingual
   m_EditorClassIdentifier: 
   name: Multi-lingual
-  traitColor: {r: 0.87931645, g: 0.745105, b: 0.9811321, a: 0}
+  traitColor: {r: 0.87931645, g: 0.745105, b: 0.9811321, a: 1}

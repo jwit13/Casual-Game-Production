@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Nerdy
   m_EditorClassIdentifier: 
   name: Nerdy
-  traitColor: {r: 0.22414559, g: 0.6886792, b: 0.52763164, a: 0}
+  traitColor: {r: 0.22414559, g: 0.6886792, b: 0.52763164, a: 1}

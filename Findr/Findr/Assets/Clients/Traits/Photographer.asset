@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Photographer
   m_EditorClassIdentifier: 
   name: Photographer
-  traitColor: {r: 0.53375095, g: 0.40846384, b: 0.6320754, a: 0}
+  traitColor: {r: 0.53375095, g: 0.40846384, b: 0.6320754, a: 1}

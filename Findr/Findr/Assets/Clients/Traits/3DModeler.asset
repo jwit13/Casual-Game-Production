@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 3DModeler
   m_EditorClassIdentifier: 
   name: 3D-Modeler
-  traitColor: {r: 0.756439, g: 0.9150943, b: 0.41006586, a: 0}
+  traitColor: {r: 0.756439, g: 0.9150943, b: 0.41006586, a: 1}

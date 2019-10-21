@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pessimist
   m_EditorClassIdentifier: 
   name: Pessimist
-  traitColor: {r: 0.2924528, g: 0.28466573, b: 0.06759523, a: 0}
+  traitColor: {r: 0.2924528, g: 0.28466573, b: 0.06759523, a: 1}

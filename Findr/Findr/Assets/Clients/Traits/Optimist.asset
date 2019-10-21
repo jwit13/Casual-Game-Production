@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Optimist
   m_EditorClassIdentifier: 
   name: Optimist
-  traitColor: {r: 0.9888284, g: 1, b: 0, a: 0}
+  traitColor: {r: 0.9888284, g: 1, b: 0, a: 1}

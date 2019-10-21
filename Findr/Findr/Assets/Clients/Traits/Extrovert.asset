@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Extrovert
   m_EditorClassIdentifier: 
   name: Extrovert
-  traitColor: {r: 0.46016535, g: 0.28439835, b: 0.7264151, a: 0}
+  traitColor: {r: 0.46016535, g: 0.28439835, b: 0.7264151, a: 1}

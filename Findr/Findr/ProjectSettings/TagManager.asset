@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Background
   - SelectedPanel
+  - LobbyManager
   layers:
   - Default
   - TransparentFX
