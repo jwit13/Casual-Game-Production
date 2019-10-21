@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Meat-eater
   m_EditorClassIdentifier: 
   name: Meat-eater
-  traitColor: {r: 0.509434, g: 0, b: 0.1347762, a: 0}
+  traitColor: {r: 0.509434, g: 0, b: 0.1347762, a: 1}

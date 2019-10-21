@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Model
   m_EditorClassIdentifier: 
   name: Model
-  traitColor: {r: 0.91764706, g: 0, b: 0.4, a: 0}
+  traitColor: {r: 0.91764706, g: 0, b: 0.4, a: 1}

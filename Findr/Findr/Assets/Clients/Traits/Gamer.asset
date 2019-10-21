@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Gamer
   m_EditorClassIdentifier: 
   name: Gamer
-  traitColor: {r: 0.9150943, g: 0.55682623, b: 0.71834904, a: 0}
+  traitColor: {r: 0.9150943, g: 0.55682623, b: 0.71834904, a: 1}

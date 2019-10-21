@@ -10,7 +10,7 @@ public class CustomClients : ScriptableObject
     public new string name;
     public string bio;
     public Sprite artwork;
-    public List<ScriptableObject> likedTraits = new List<ScriptableObject>();
-    public List<ScriptableObject> dislikedTraits = new List<ScriptableObject>();
+    public List<Trait> likedTraits = new List<Trait>();
+    public List<Trait> dislikedTraits = new List<Trait>();
 
 }

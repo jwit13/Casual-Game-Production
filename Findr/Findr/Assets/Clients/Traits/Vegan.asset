@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Vegan
   m_EditorClassIdentifier: 
   name: Vegan
-  traitColor: {r: 0.02828724, g: 0.8396226, b: 0.011881431, a: 0}
+  traitColor: {r: 0.02828724, g: 0.8396226, b: 0.011881431, a: 1}

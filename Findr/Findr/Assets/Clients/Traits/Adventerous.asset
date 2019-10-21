@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Adventerous
   m_EditorClassIdentifier: 
   name: Adventerous
-  traitColor: {r: 0.87712497, g: 0.9528302, b: 0.73260057, a: 0}
+  traitColor: {r: 0.87712497, g: 0.9528302, b: 0.73260057, a: 1}

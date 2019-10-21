@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 90093481}
   - component: {fileID: 90093480}
   m_Layer: 5
-  m_Name: TraitImage5 (1)
+  m_Name: DislikeTraitImage5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 161743508}
   - component: {fileID: 161743507}
   m_Layer: 5
-  m_Name: TraitImage4 (1)
+  m_Name: DislikeTraitImage4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,7 +1083,7 @@ GameObject:
   - component: {fileID: 333154871}
   - component: {fileID: 333154870}
   m_Layer: 5
-  m_Name: TraitImage2 (1)
+  m_Name: DislikeTraitImage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 504029862}
   - component: {fileID: 504029861}
   m_Layer: 5
-  m_Name: TraitImage3 (1)
+  m_Name: DislikeTraitImage3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,6 +1766,7 @@ GameObject:
   - component: {fileID: 752852775}
   - component: {fileID: 752852774}
   - component: {fileID: 752852776}
+  - component: {fileID: 752852777}
   m_Layer: 5
   m_Name: SelectedPanelBG
   m_TagString: Untagged
@@ -1841,6 +1842,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3465cd6574b2a40b627b4b4238e15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &752852777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752852772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfd1415e6b85f4469dd6d0d26a29151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedSharkImage: {fileID: 268956449}
+  selectedSharkName: {fileID: 1873109217}
+  bioText: {fileID: 598486402}
+  likedTraits:
+  - {fileID: 467062936}
+  - {fileID: 185508886}
+  - {fileID: 1470484308}
+  - {fileID: 689948322}
+  - {fileID: 856967332}
+  - {fileID: 553982671}
+  dislikedTraits:
+  - {fileID: 2020359011}
+  - {fileID: 333154868}
+  - {fileID: 504029859}
+  - {fileID: 161743505}
+  - {fileID: 90093478}
+  - {fileID: 1956836226}
 --- !u!1 &781560788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,8 +3764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -0.0041504}
-  m_SizeDelta: {x: 1080, y: 1918}
+  m_AnchoredPosition: {x: 0.000030518, y: -0.00098252}
+  m_SizeDelta: {x: 1080, y: 1922.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434864735
 MonoBehaviour:
@@ -4505,6 +4535,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 71060064}
+  - {fileID: 1943525587}
   m_Father: {fileID: 1207507710}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4831,6 +4862,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902321491}
   m_CullTransparentMesh: 0
+--- !u!1 &1943525586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943525587}
+  - component: {fileID: 1943525589}
+  - component: {fileID: 1943525588}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1943525587
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943525586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1763889113}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0, y: 2}
+  m_SizeDelta: {x: -78.2, y: -199.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1943525588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943525586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1943525589
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943525586}
+  m_CullTransparentMesh: 0
 --- !u!1 &1956836226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,7 +4947,7 @@ GameObject:
   - component: {fileID: 1956836229}
   - component: {fileID: 1956836228}
   m_Layer: 5
-  m_Name: TraitImage6 (1)
+  m_Name: DislikeTraitImage6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4928,7 +5032,7 @@ GameObject:
   - component: {fileID: 2020359014}
   - component: {fileID: 2020359013}
   m_Layer: 5
-  m_Name: TraitImage (1)
+  m_Name: DislikeTraitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
