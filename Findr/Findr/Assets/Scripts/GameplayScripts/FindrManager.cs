@@ -29,18 +29,18 @@ public class FindrManager : MonoBehaviour
     private bool destroyCard;
     private bool held;
 
-    private float mainTimer = 60.0f;
+    private float mainTimer = 6.0f;
     private float timer;
     public bool canCount = false;
     private bool doOnce = false;
     
-    private float initialScore = 0.0f;
-    private float score;
+    private int initialScore = 0;
+    private int score;
     private float rightSwipePos;
     [SerializeField]
     private int cardCount;
 
-    float calculateMoney;
+    int calculateMoney;
 
     private LobbyManager lobbyManager;
 
@@ -204,7 +204,7 @@ public class FindrManager : MonoBehaviour
             timer = 0.0f;
             ScoreToMoney();
             ReturnPanel();
-
+            LobbyManager.Instance.money = calculateMoney;
         }
 
     }
