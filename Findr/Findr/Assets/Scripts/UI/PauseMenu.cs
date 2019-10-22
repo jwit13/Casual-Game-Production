@@ -41,7 +41,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Options()
     {
-        pauseMenuUI.SetActive(false);
+        if (Paused)
+        {
+            pauseMenuUI.SetActive(false);
+        }
+
         optionsMenuUI.SetActive(true);
     }
 
@@ -56,6 +60,10 @@ public class PauseMenu : MonoBehaviour
         if (Paused)
         {
             pauseMenuUI.SetActive(true);
+            optionsMenuUI.SetActive(false);
+        }
+        else
+        {
             optionsMenuUI.SetActive(false);
         }
     }
