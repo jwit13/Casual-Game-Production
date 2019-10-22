@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Beard
   m_EditorClassIdentifier: 
   name: Beard
-  traitColor: {r: 0.5943396, g: 0.3033451, b: 0.1485849, a: 0}
+  traitColor: {r: 0.5943396, g: 0.3033451, b: 0.1485849, a: 1}

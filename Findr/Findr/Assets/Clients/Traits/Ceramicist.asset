@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Ceramicist
   m_EditorClassIdentifier: 
   name: Ceramicist
-  traitColor: {r: 0.5276789, g: 0.73211473, b: 0.9245283, a: 0}
+  traitColor: {r: 0.5276789, g: 0.73211473, b: 0.9245283, a: 1}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pescatarian
   m_EditorClassIdentifier: 
   name: Pescatarian
-  traitColor: {r: 0.1013261, g: 0.31132078, b: 0.18726392, a: 0}
+  traitColor: {r: 0.1013261, g: 0.31132078, b: 0.18726392, a: 1}

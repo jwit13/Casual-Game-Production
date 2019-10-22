@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Movie Geek
   m_EditorClassIdentifier: 
   name: Movie Geek
-  traitColor: {r: 0.19855823, g: 0.4339623, b: 0.42697594, a: 0}
+  traitColor: {r: 0.19855823, g: 0.4339623, b: 0.42697594, a: 1}
