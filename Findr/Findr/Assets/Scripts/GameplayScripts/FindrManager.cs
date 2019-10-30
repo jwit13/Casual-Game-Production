@@ -54,6 +54,9 @@ public class FindrManager : MonoBehaviour
     public GameObject rightSwipeBox;
     public GameObject leftSwipeBox;
 
+    public static FindrManager main;
+    public static string staticSelectedClientName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -165,6 +168,7 @@ public class FindrManager : MonoBehaviour
             customClient = (CustomClients)lobbyManager.selectedClient;
             int clientTraitsNum = customClient.likedTraits.Count;
             selectedClientName.text = customClient.name;
+            staticSelectedClientName = customClient.name;
             selectedClientImage.sprite = customClient.artwork;
             for(int i = 0; i < clientTraitsNum; i++)
             {
@@ -186,24 +190,25 @@ public class FindrManager : MonoBehaviour
 
     private void Timer()
     {
-
-        if(timer >= 0.0f && canCount)
+        if (!UIManager.isPaused)
         {
-            timer -= Time.deltaTime;
-            timeText.text = timer.ToString("F");
+            if (timer >= 0.0f && canCount)
+            {
+                timer -= Time.deltaTime;
+                timeText.text = timer.ToString("F");
+            }
+            else if (timer <= 0.0f && !doOnce)
+            {
+                canCount = false;
+                doOnce = true;
+                timeText.text = "0.00";
+                timer = 0.0f;
+                ScoreToMoney();
+                ReturnPanel();
+                //Adds money
+                LobbyManager.Instance.money += calculateMoney;
+            }
         }
-        else if(timer <= 0.0f && !doOnce)
-        {
-            canCount = false;
-            doOnce = true;
-            timeText.text = "0.00";
-            timer = 0.0f;
-            ScoreToMoney();
-            ReturnPanel();
-            //Adds money
-            LobbyManager.Instance.money += calculateMoney;
-        }
-
     }
 
     private void ReturnPanel()

@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject upgradesMenu;
 
     public static bool menuUp;
+    public static bool isPaused;
 
     public static UIManager instance;
 

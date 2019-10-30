@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d81196819a65cf448edd833d7cdf137, type: 3}
+  m_Name: CatShark
+  m_EditorClassIdentifier: 
+  name: CatShark
+  bio: I sure do like the Marriott Burger!
+  artwork: {fileID: 21300000, guid: c20fc464a730bf746ba47a0b02b2ed20, type: 3}
+  likedTraits:
+  - {fileID: 11400000, guid: aea3f24b2c5412245874904ca12d291d, type: 2}
+  - {fileID: 11400000, guid: db13829b5c1a9764ab09e3228889aa8e, type: 2}
+  - {fileID: 11400000, guid: a91564f891fe44d44a05e1c5712ac35b, type: 2}
+  - {fileID: 11400000, guid: a6f7330c642a5f44c9d82d3250677808, type: 2}
+  - {fileID: 11400000, guid: 88139ee53e98b484bb24af0037c42eb6, type: 2}
+  dislikedTraits:
+  - {fileID: 11400000, guid: 9b0df3cde122dd64fa27995be7973bea, type: 2}
+  - {fileID: 11400000, guid: 561d56d165b01734680748172dbb2089, type: 2}
+  - {fileID: 11400000, guid: 0725950660d73354db4050d03eb37d94, type: 2}

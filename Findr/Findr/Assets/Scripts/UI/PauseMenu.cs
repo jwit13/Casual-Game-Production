@@ -15,15 +15,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
+        UIManager.isPaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         UIManager.menuUp = true;
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
+        UIManager.isPaused = true;
     }
 
     public void PlayGame()
