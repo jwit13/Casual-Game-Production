@@ -3129,6 +3129,7 @@ MonoBehaviour:
   - {fileID: 90093478}
   - {fileID: 1956836226}
   selectedClient: {fileID: 0}
+  clientSelectPanel: {fileID: 1135717397}
 --- !u!1 &799125329
 GameObject:
   m_ObjectHideFlags: 0

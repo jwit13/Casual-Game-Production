@@ -14,10 +14,12 @@ public class PopulateSelected : MonoBehaviour
     public List<GameObject> dislikedTraits;
 
     public ScriptableObject selectedClient;
-
+    public GameObject clientSelectPanel;
     public void SelectedMe()
     {
         LobbyManager.Instance.selectedClient = selectedClient;
+        gameObject.SetActive(false);
+        clientSelectPanel.SetActive(false);
         SceneManager.LoadScene(2);
 
     }

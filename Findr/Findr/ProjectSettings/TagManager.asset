@@ -7,6 +7,7 @@ TagManager:
   - Background
   - SelectedPanel
   - LobbyManager
+  - MatcheeCard
   layers:
   - Default
   - TransparentFX
