@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -595,10 +595,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188.5, y: 186}
-  m_SizeDelta: {x: 830, y: 1918}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 188.5, y: 0}
+  m_SizeDelta: {x: 830, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1569431292283056652
 CanvasRenderer:
@@ -651,6 +651,50 @@ MonoBehaviour:
   isMouseOver: 0
   rightSwipe: 0
   leftSwipe: 0
+  ProfilePic: {fileID: 1569431290381416846}
+  Name: {fileID: 1569431292373329285}
+  Bio: {fileID: 1569431291845229074}
+  Traits:
+  - {fileID: 1569431292251120651}
+  - {fileID: 1569431291371910591}
+  - {fileID: 1569431292111437230}
+  - {fileID: 1569431290623511485}
+  - {fileID: 1569431290816511724}
+  - {fileID: 4854842342875866928}
+  MatcheeList:
+  - {fileID: 11400000, guid: 4b192c1b57e6ab749a2daafbd0ed6565, type: 2}
+  - {fileID: 11400000, guid: af357deaa23b54948b84a8cfd1431e14, type: 2}
+  - {fileID: 11400000, guid: a2cd8277245bb55409dd7357557db271, type: 2}
+  - {fileID: 11400000, guid: 04b9e238121225a45915c53f2570770e, type: 2}
+  - {fileID: 11400000, guid: 3c8696ab0b7487f4ea9883e84ed5346d, type: 2}
+  - {fileID: 11400000, guid: 85258c17df9bf4641ba4641834f81dd7, type: 2}
+  - {fileID: 11400000, guid: bc9291a346a4d354a8546a7a40a8ef4f, type: 2}
+  - {fileID: 11400000, guid: 6c99cbbd928a06f4e8c308ccfee9583c, type: 2}
+  - {fileID: 11400000, guid: 3fb25bbd88b9e324192846e15b6544eb, type: 2}
+  TraitList:
+  - {fileID: 11400000, guid: 088af5ff5aca2194592e2b16cff04a7c, type: 2}
+  - {fileID: 11400000, guid: b40368b6ae2e7b945ad95f3506794f78, type: 2}
+  - {fileID: 11400000, guid: 73a02ff5b0c51604fbd13700ccee5db0, type: 2}
+  - {fileID: 11400000, guid: 3de2692aa12bbc0448f6b4d0d4ffea15, type: 2}
+  - {fileID: 11400000, guid: aea3f24b2c5412245874904ca12d291d, type: 2}
+  - {fileID: 11400000, guid: 605bb1e7735c00546939bb43a2d70298, type: 2}
+  - {fileID: 11400000, guid: a91564f891fe44d44a05e1c5712ac35b, type: 2}
+  - {fileID: 11400000, guid: 8982c5b10da4efa4aa88d1f87dde7dd1, type: 2}
+  - {fileID: 11400000, guid: 9b0df3cde122dd64fa27995be7973bea, type: 2}
+  - {fileID: 11400000, guid: 561d56d165b01734680748172dbb2089, type: 2}
+  - {fileID: 11400000, guid: 88139ee53e98b484bb24af0037c42eb6, type: 2}
+  - {fileID: 11400000, guid: e3f82d8fb6307aa4e9b2e3c12b83fc49, type: 2}
+  - {fileID: 11400000, guid: db13829b5c1a9764ab09e3228889aa8e, type: 2}
+  - {fileID: 11400000, guid: 0725950660d73354db4050d03eb37d94, type: 2}
+  - {fileID: 11400000, guid: abcb7f668d382254fa6f5bfc89baf4d8, type: 2}
+  - {fileID: 11400000, guid: a6f7330c642a5f44c9d82d3250677808, type: 2}
+  - {fileID: 11400000, guid: 3d8234778d8cd274282224ca210e272a, type: 2}
+  - {fileID: 11400000, guid: 54257dc31bde94c49b4fcfcb40e97b20, type: 2}
+  - {fileID: 11400000, guid: fcb073b6e22c4bb4b889f937d4535808, type: 2}
+  - {fileID: 11400000, guid: 96631272b29e68048b5eaa28a260b450, type: 2}
+  - {fileID: 11400000, guid: a477da14f5f7561468e1277ed4b43a95, type: 2}
+  - {fileID: 11400000, guid: 393096ba98cebaa41b0676ad801bf1ef, type: 2}
+  usedTraitNums: 
 --- !u!114 &8928608270377423772
 MonoBehaviour:
   m_ObjectHideFlags: 0
