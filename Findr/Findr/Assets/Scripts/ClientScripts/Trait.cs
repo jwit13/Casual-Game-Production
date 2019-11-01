@@ -8,6 +8,6 @@ public class Trait : ScriptableObject
 {
     //Set up traits.
     public new string name;
-    public Image traitImage;
+    public Sprite traitImage;
     
 }

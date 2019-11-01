@@ -56,7 +56,7 @@ public class SelectClient : MonoBehaviour
             else
             {
                 //Change color of trait square shit with the trait's set color
-                populate.likedTraits[i].GetComponent<Image>().sprite = customClient.likedTraits[i].traitImage.sprite;
+                populate.likedTraits[i].GetComponent<Image>().sprite = customClient.likedTraits[i].traitImage;
                 populate.likedTraits[i].SetActive(true);
             }
 
@@ -74,7 +74,7 @@ public class SelectClient : MonoBehaviour
                 else
                 {
                     //Change color of trait square shit with the trait's set color
-                    populate.dislikedTraits[i].GetComponent<Image>().sprite = customClient.dislikedTraits[i].traitImage.sprite;
+                    populate.dislikedTraits[i].GetComponent<Image>().sprite = customClient.dislikedTraits[i].traitImage;
                     populate.dislikedTraits[i].SetActive(true);
                 }
 
