@@ -83,7 +83,7 @@ public class MatcheeCardScript : MonoBehaviour
                     randVal = UnityEngine.Random.Range(0, TraitList.Count);
                 }
                 usedTraitNums.Add(randVal);
-                i.color = TraitList[randVal].traitColor;
+                i.sprite = TraitList[randVal].traitImage.sprite;
             }
 
         }
@@ -101,7 +101,7 @@ public class MatcheeCardScript : MonoBehaviour
                     randVal = UnityEngine.Random.Range(0, TraitList.Count);
                 }
                 usedTraitNums.Add(randVal);
-                i.color = TraitList[randVal].traitColor;
+                i.sprite = TraitList[randVal].traitImage.sprite;
             }
         }
     }
