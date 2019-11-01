@@ -172,7 +172,7 @@ public class FindrManager : MonoBehaviour
             selectedClientImage.sprite = customClient.artwork;
             for(int i = 0; i < clientTraitsNum; i++)
             {
-                selectedClientTraits[i].GetComponent<Image>().color = customClient.likedTraits[i].traitColor;
+                selectedClientTraits[i].GetComponent<Image>().sprite = customClient.likedTraits[i].traitImage;
                 selectedClientTraits[i].SetActive(true);
             }                     
 
