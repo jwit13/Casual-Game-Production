@@ -579,6 +579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8984102744024869628, guid: cdb22b4b1e922724d956753fc87e4241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8984102744038502171, guid: cdb22b4b1e922724d956753fc87e4241,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -659,6 +664,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1131613915}
+<<<<<<< HEAD
     - target: {fileID: 8984102744750917800, guid: cdb22b4b1e922724d956753fc87e4241,
         type: 3}
       propertyPath: m_IsActive
@@ -668,6 +674,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+=======
+    - target: {fileID: 8984102745256538969, guid: cdb22b4b1e922724d956753fc87e4241,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -126
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984102745487658579, guid: cdb22b4b1e922724d956753fc87e4241,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.5998535
+>>>>>>> TraitsStuff2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb22b4b1e922724d956753fc87e4241, type: 3}

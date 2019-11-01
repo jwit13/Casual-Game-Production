@@ -12,6 +12,7 @@ public class SelectClient : MonoBehaviour
 
     private void Start()
     {
+        
         customClient = LobbyManager.Instance.usedList[0];
         LobbyManager.Instance.usedList.RemoveAt(0);
         gameObject.GetComponent<Image>().sprite = customClient.artwork;
@@ -55,7 +56,7 @@ public class SelectClient : MonoBehaviour
             else
             {
                 //Change color of trait square shit with the trait's set color
-                populate.likedTraits[i].GetComponent<Image>().color = customClient.likedTraits[i].traitColor;
+                populate.likedTraits[i].GetComponent<Image>().sprite = customClient.likedTraits[i].traitImage;
                 populate.likedTraits[i].SetActive(true);
             }
 
@@ -73,7 +74,7 @@ public class SelectClient : MonoBehaviour
                 else
                 {
                     //Change color of trait square shit with the trait's set color
-                    populate.dislikedTraits[i].GetComponent<Image>().color = customClient.dislikedTraits[i].traitColor;
+                    populate.dislikedTraits[i].GetComponent<Image>().sprite = customClient.dislikedTraits[i].traitImage;
                     populate.dislikedTraits[i].SetActive(true);
                 }
 
