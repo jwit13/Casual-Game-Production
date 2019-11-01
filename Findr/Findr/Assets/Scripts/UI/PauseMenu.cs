@@ -15,15 +15,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
+        UIManager.isPaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         UIManager.menuUp = true;
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
+        UIManager.isPaused = true;
     }
 
     public void PlayGame()
@@ -41,7 +43,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Options()
     {
-        pauseMenuUI.SetActive(false);
+        if (Paused)
+        {
+            pauseMenuUI.SetActive(false);
+        }
+
         optionsMenuUI.SetActive(true);
     }
 
@@ -56,6 +62,10 @@ public class PauseMenu : MonoBehaviour
         if (Paused)
         {
             pauseMenuUI.SetActive(true);
+            optionsMenuUI.SetActive(false);
+        }
+        else
+        {
             optionsMenuUI.SetActive(false);
         }
     }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c0065ad35b3a0488e5e7f9c1feb0b2, type: 3}
   m_Name: Patient
   m_EditorClassIdentifier: 
-  name: Patient
-  traitColor: {r: 0.8632076, g: 0.9890748, b: 1, a: 1}
+  name: 
+  traitImage: {fileID: 0}
